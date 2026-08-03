@@ -1,0 +1,19 @@
+{
+  "name": "daldal",
+  "version": "0.1.0",
+  "private": true,
+  "packageManager": "pnpm@11.9.0",
+  "scripts": {
+    "dev": "turbo dev",
+    "dev:web": "turbo dev --filter=web",
+    "dev:crawler": "turbo dev --filter=crawler",
+    "start": "turbo start",
+    "build": "turbo build",
+    "lint": "turbo lint",
+    "typecheck": "turbo typecheck",
+    "check": "turbo lint typecheck"
+  },
+  "devDependencies": {
+    "turbo": "^2.10.8"
+  }
+}

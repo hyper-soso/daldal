@@ -1,0 +1,7 @@
+packages:
+  - web
+  - crawler
+
+allowBuilds:
+  sharp: true
+  unrs-resolver: true
