@@ -33,3 +33,32 @@ pnpm start
 pnpm --filter web add <package>
 pnpm --filter crawler add <package>
 ```
+
+## Git 커밋 규칙
+
+커밋 메시지는 [Conventional Commits](https://www.conventionalcommits.org/) 형식을 사용합니다.
+
+```text
+<type>(<scope>): <subject>
+```
+
+주요 type:
+
+- `feat`: 기능 추가
+- `fix`: 버그 수정
+- `docs`: 문서 변경
+- `style`: 동작에 영향 없는 스타일 변경
+- `refactor`: 리팩터링
+- `test`: 테스트 추가 또는 수정
+- `build`: 빌드 시스템이나 의존성 변경
+- `ci`: CI 설정 변경
+- `chore`: 기타 유지보수
+- `revert`: 커밋 되돌리기
+
+```text
+feat(web): add login page
+fix(crawler): handle request timeout
+chore(repo): configure husky
+```
+
+커밋 직전에는 staged 상태인 앱 코드에 ESLint가 실행되고, 커밋 메시지는 commitlint로 검사됩니다.
