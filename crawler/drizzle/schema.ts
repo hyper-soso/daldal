@@ -28,7 +28,7 @@ const timestampColumns = () => ({
 });
 
 export const cafes = pgTable("cafe", {
-  id: uuid("id").defaultRandom().primaryKey(),
+  id: varchar("id").primaryKey(),
 
   name: varchar("name", { length: 100 }).notNull(),
   description: text("description"),
@@ -40,17 +40,20 @@ export const cafes = pgTable("cafe", {
 });
 
 export const cafeCategories = pgTable("cafe_category", {
-  id: uuid("id").defaultRandom().primaryKey(),
+  id: varchar("id").primaryKey(),
 
-  cafeId: uuid("cafe_id")
+  cafeId: varchar("cafe_id")
     .notNull()
     .references(() => cafes.id, {
       onDelete: "cascade",
     }),
 
-  parentId: uuid("parent_id").references((): AnyPgColumn => cafeCategories.id, {
-    onDelete: "cascade",
-  }),
+  parentId: varchar("parent_id").references(
+    (): AnyPgColumn => cafeCategories.id,
+    {
+      onDelete: "cascade",
+    },
+  ),
 
   name: varchar("name", { length: 100 }).notNull(),
 
@@ -63,7 +66,7 @@ export const cafeCategories = pgTable("cafe_category", {
 export const menus = pgTable("menu", {
   id: uuid("id").defaultRandom().primaryKey(),
 
-  categoryId: uuid("category_id")
+  categoryId: varchar("category_id")
     .notNull()
     .references(() => cafeCategories.id, {
       onDelete: "cascade",
@@ -103,15 +106,20 @@ export const menuVariants = pgTable("menu_variant", {
   /**
    * 음료가 아니거나 용량 정보가 없으면 null
    */
-  size: integer("size"),
+  size: numeric("size", {
+    precision: 10,
+    scale: 2,
+    mode: "number",
+  }),
   unit: varchar("unit"),
 
   /**
    * 원 단위 정수
    *
    * 4,500원 → 4500
+   * 가격을 제공하지 않는 브랜드는 null
    */
-  price: integer("price").notNull(),
+  price: integer("price"),
 
   /**
    * 단위: g

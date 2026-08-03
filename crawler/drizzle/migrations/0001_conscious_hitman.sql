@@ -1,0 +1,1 @@
+ALTER TABLE "menu_variant" ALTER COLUMN "size" SET DATA TYPE numeric(10, 2);

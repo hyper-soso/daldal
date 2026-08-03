@@ -1,7 +1,7 @@
 CREATE TABLE "cafe_category" (
-	"id" uuid PRIMARY KEY DEFAULT gen_random_uuid() NOT NULL,
-	"cafe_id" uuid NOT NULL,
-	"parent_id" uuid,
+	"id" varchar PRIMARY KEY NOT NULL,
+	"cafe_id" varchar NOT NULL,
+	"parent_id" varchar,
 	"name" varchar(100) NOT NULL,
 	"sort_order" integer DEFAULT 0 NOT NULL,
 	"is_visible" boolean DEFAULT true NOT NULL,
@@ -10,7 +10,7 @@ CREATE TABLE "cafe_category" (
 );
 --> statement-breakpoint
 CREATE TABLE "cafe" (
-	"id" uuid PRIMARY KEY DEFAULT gen_random_uuid() NOT NULL,
+	"id" varchar PRIMARY KEY NOT NULL,
 	"name" varchar(100) NOT NULL,
 	"description" text,
 	"logo_url" text,
@@ -25,7 +25,7 @@ CREATE TABLE "menu_variant" (
 	"name" varchar(50) NOT NULL,
 	"size" integer,
 	"unit" varchar,
-	"price" integer NOT NULL,
+	"price" integer,
 	"fat" numeric(10, 2),
 	"saturated_fat" numeric(10, 2),
 	"sugars" numeric(10, 2),
@@ -43,7 +43,7 @@ CREATE TABLE "menu_variant" (
 --> statement-breakpoint
 CREATE TABLE "menu" (
 	"id" uuid PRIMARY KEY DEFAULT gen_random_uuid() NOT NULL,
-	"category_id" uuid NOT NULL,
+	"category_id" varchar NOT NULL,
 	"name" varchar(150) NOT NULL,
 	"description" text,
 	"image_url" text,
