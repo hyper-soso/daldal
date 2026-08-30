@@ -33,6 +33,7 @@ export async function replaceStarbucksMenus({
         set: {
           name: STARBUCKS_CAFE.name,
           description: STARBUCKS_CAFE.description,
+          logoUrl: STARBUCKS_CAFE.logoUrl,
           isActive: true,
           updatedAt: new Date(),
         },

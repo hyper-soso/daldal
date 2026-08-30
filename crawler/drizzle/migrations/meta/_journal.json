@@ -15,6 +15,27 @@
       "when": 1785774573841,
       "tag": "0001_conscious_hitman",
       "breakpoints": true
+    },
+    {
+      "idx": 2,
+      "version": "7",
+      "when": 1788100437410,
+      "tag": "0002_public_read_only_rls",
+      "breakpoints": true
+    },
+    {
+      "idx": 3,
+      "version": "7",
+      "when": 1788101848063,
+      "tag": "0003_web_read_model",
+      "breakpoints": true
+    },
+    {
+      "idx": 4,
+      "version": "7",
+      "when": 1788104875883,
+      "tag": "0004_read_model_logo_fallback",
+      "breakpoints": true
     }
   ]
 }

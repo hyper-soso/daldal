@@ -33,6 +33,7 @@ export async function replaceEdiyaMenus({
         set: {
           name: EDIYA_CAFE.name,
           description: EDIYA_CAFE.description,
+          logoUrl: EDIYA_CAFE.logoUrl,
           isActive: true,
           updatedAt: new Date(),
         },

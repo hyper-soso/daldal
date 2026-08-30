@@ -1,5 +1,7 @@
 import { NextResponse } from "next/server";
 
+import { refreshWebReadModel } from "@/lib/read-model";
+
 import { PASCUCCI_CAFE } from "./cafe";
 import { crawlPascucciMenus } from "./crawler";
 import { replacePascucciMenus } from "./repository";
@@ -16,6 +18,8 @@ export async function GET() {
     }
 
     await replacePascucciMenus(result);
+
+    await refreshWebReadModel();
     console.log(
       `[pascucci] saved ${result.menus.length} menus and ${result.variants.length} variants`,
     );

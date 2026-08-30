@@ -37,6 +37,7 @@ export async function replaceMegaCoffeeMenus({
         set: {
           name: MEGA_COFFEE_CAFE.name,
           description: MEGA_COFFEE_CAFE.description,
+          logoUrl: MEGA_COFFEE_CAFE.logoUrl,
           isActive: true,
           updatedAt: new Date(),
         },

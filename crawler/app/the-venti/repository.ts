@@ -35,6 +35,7 @@ export async function replaceTheVentiMenus({
         set: {
           name: THE_VENTI_CAFE.name,
           description: THE_VENTI_CAFE.description,
+          logoUrl: THE_VENTI_CAFE.logoUrl,
           isActive: true,
           updatedAt: new Date(),
         },

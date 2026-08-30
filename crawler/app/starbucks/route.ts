@@ -1,5 +1,7 @@
 import { NextResponse } from "next/server";
 
+import { refreshWebReadModel } from "@/lib/read-model";
+
 import { STARBUCKS_CAFE } from "./cafe";
 import { crawlStarbucksMenus } from "./crawler";
 import { replaceStarbucksMenus } from "./repository";
@@ -16,6 +18,8 @@ export async function GET() {
     }
 
     await replaceStarbucksMenus(result);
+
+    await refreshWebReadModel();
     console.log(
       `[starbucks] saved ${result.menus.length} menus and ${result.variants.length} variants`,
     );

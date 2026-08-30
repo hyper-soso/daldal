@@ -1,5 +1,7 @@
 import { NextResponse } from "next/server";
 
+import { refreshWebReadModel } from "@/lib/read-model";
+
 import { MEGA_COFFEE_CAFE } from "./cafe";
 import { crawlMegaCoffeeMenus } from "./crawler";
 import { replaceMegaCoffeeMenus } from "./repository";
@@ -18,6 +20,8 @@ export async function GET() {
     }
 
     await replaceMegaCoffeeMenus(result);
+
+    await refreshWebReadModel();
     console.log(
       `[mega-coffee] saved ${result.menus.length} menus and ${result.variants.length} variants`,
     );

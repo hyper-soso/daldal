@@ -13,6 +13,7 @@ export const PASCUCCI_CAFE: NewCafe = {
   id: "pascucci",
   name: "파스쿠찌",
   description: "CAFFÈ PASCUCCI",
+  logoUrl: "/logos/pascucci.svg",
   isActive: true,
 };
 

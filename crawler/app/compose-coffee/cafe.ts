@@ -8,6 +8,7 @@ export const COMPOSE_COFFEE_CAFE: NewCafe = {
   id: "compose-coffee",
   name: "컴포즈커피",
   description: "COMPOSE COFFEE",
+  logoUrl: "/logos/compose-coffee.svg",
   isActive: true,
 };
 

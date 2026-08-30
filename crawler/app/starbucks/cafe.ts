@@ -9,6 +9,7 @@ export const STARBUCKS_CAFE: NewCafe = {
   id: "starbucks",
   name: "스타벅스",
   description: "STARBUCKS",
+  logoUrl: "/logos/starbucks.svg",
   isActive: true,
 };
 

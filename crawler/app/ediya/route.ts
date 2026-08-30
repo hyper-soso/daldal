@@ -1,5 +1,7 @@
 import { NextResponse } from "next/server";
 
+import { refreshWebReadModel } from "@/lib/read-model";
+
 import { EDIYA_CAFE } from "./cafe";
 import { crawlEdiyaMenus } from "./crawler";
 import { replaceEdiyaMenus } from "./repository";
@@ -16,6 +18,8 @@ export async function GET() {
     }
 
     await replaceEdiyaMenus(result);
+
+    await refreshWebReadModel();
     console.log(
       `[ediya] saved ${result.menus.length} menus and ${result.variants.length} variants`,
     );

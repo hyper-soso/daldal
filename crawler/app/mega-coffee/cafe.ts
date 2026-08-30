@@ -9,6 +9,7 @@ export const MEGA_COFFEE_CAFE: NewCafe = {
   id: "mega-mgc-coffee",
   name: "메가MGC커피",
   description: "MEGA MGC COFFEE",
+  logoUrl: "/logos/mega-mgc-coffee.svg",
   isActive: true,
 };
 

@@ -1,5 +1,7 @@
 import { NextResponse } from "next/server";
 
+import { refreshWebReadModel } from "@/lib/read-model";
+
 import { PAIKS_COFFEE_CAFE } from "./cafe";
 import { crawlPaiksCoffeeMenus } from "./crawler";
 import { replacePaiksCoffeeMenus } from "./repository";
@@ -18,6 +20,8 @@ export async function GET() {
     }
 
     await replacePaiksCoffeeMenus(result);
+
+    await refreshWebReadModel();
     console.log(
       `[paiks-coffee] saved ${result.menus.length} menus and ${result.variants.length} variants`,
     );

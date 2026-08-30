@@ -9,6 +9,7 @@ export const EDIYA_CAFE: NewCafe = {
   id: "ediya",
   name: "이디야커피",
   description: "EDIYA COFFEE",
+  logoUrl: "/logos/ediya.svg",
   isActive: true,
 };
 

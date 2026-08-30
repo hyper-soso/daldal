@@ -8,6 +8,7 @@ export const THE_VENTI_CAFE: NewCafe = {
   id: "the-venti",
   name: "더벤티",
   description: "THE VENTI",
+  logoUrl: "/logos/the-venti.svg",
   isActive: true,
 };
 

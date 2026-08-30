@@ -33,6 +33,7 @@ export async function replacePascucciMenus({
         set: {
           name: PASCUCCI_CAFE.name,
           description: PASCUCCI_CAFE.description,
+          logoUrl: PASCUCCI_CAFE.logoUrl,
           isActive: true,
           updatedAt: new Date(),
         },

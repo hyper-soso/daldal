@@ -1,5 +1,7 @@
 import { NextResponse } from "next/server";
 
+import { refreshWebReadModel } from "@/lib/read-model";
+
 import { COMPOSE_COFFEE_CAFE } from "./cafe";
 import { crawlComposeCoffeeMenus } from "./crawler";
 import { replaceComposeCoffeeMenus } from "./repository";
@@ -18,6 +20,8 @@ export async function GET() {
     }
 
     await replaceComposeCoffeeMenus(result);
+
+    await refreshWebReadModel();
     console.log(
       `[compose-coffee] saved ${result.menus.length} menus and ${result.variants.length} variants`,
     );

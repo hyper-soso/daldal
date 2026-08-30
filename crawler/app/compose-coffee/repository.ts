@@ -37,6 +37,7 @@ export async function replaceComposeCoffeeMenus({
         set: {
           name: COMPOSE_COFFEE_CAFE.name,
           description: COMPOSE_COFFEE_CAFE.description,
+          logoUrl: COMPOSE_COFFEE_CAFE.logoUrl,
           isActive: true,
           updatedAt: new Date(),
         },

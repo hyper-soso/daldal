@@ -1,5 +1,7 @@
 import { NextResponse } from "next/server";
 
+import { refreshWebReadModel } from "@/lib/read-model";
+
 import { THE_VENTI_CAFE } from "./cafe";
 import { crawlTheVentiMenus } from "./crawler";
 import { replaceTheVentiMenus } from "./repository";
@@ -16,6 +18,8 @@ export async function GET() {
     }
 
     await replaceTheVentiMenus(result);
+
+    await refreshWebReadModel();
     console.log(
       `[the-venti] saved ${result.menus.length} menus and ${result.variants.length} variants`,
     );

@@ -37,6 +37,7 @@ export async function replacePaiksCoffeeMenus({
         set: {
           name: PAIKS_COFFEE_CAFE.name,
           description: PAIKS_COFFEE_CAFE.description,
+          logoUrl: PAIKS_COFFEE_CAFE.logoUrl,
           isActive: true,
           updatedAt: new Date(),
         },

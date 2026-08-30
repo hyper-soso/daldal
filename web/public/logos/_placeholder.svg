@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" width="256" height="256" role="img" aria-label="로고 없음">
+  <rect width="256" height="256" rx="48" fill="#E7E1DA"/>
+  <path d="M78 96h84a8 8 0 0 1 8 8v40a44 44 0 0 1-44 44h-12a44 44 0 0 1-44-44v-40a8 8 0 0 1 8-8Z" fill="#B5A99A"/>
+  <path d="M170 108h10a22 22 0 0 1 0 44h-10" fill="none" stroke="#B5A99A" stroke-width="12" stroke-linecap="round"/>
+  <rect x="78" y="196" width="100" height="12" rx="6" fill="#B5A99A"/>
+</svg>

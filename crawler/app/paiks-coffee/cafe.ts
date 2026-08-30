@@ -8,6 +8,7 @@ export const PAIKS_COFFEE_CAFE: NewCafe = {
   id: "paiks-coffee",
   name: "빽다방",
   description: "PAIK'S COFFEE",
+  logoUrl: "/logos/paiks-coffee.svg",
   isActive: true,
 };
 
