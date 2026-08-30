@@ -4,6 +4,7 @@ node_modules/
 .pnp.*
 
 # build output and caches
+.pnpm-store/
 .next/
 out/
 build/
