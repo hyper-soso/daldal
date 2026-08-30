@@ -46,7 +46,7 @@ export default async function SearchPage({ searchParams }: Props) {
   const result = data as MenusWithCafeAndCategories[];
 
   return (
-    <main className="p-4 md:p-8 pt-20 md:pt-24 mx-auto max-w-7xl">
+    <main className="p-4 md:p-8 pt-20 md:pt-24 mx-auto max-w-5xl">
       <header>
         <h1 className="mt-4 text-2xl font-semibold">
           &#39;{q}&#39; 검색결과 총 {result.length}건

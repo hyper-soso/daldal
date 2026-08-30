@@ -3,7 +3,7 @@ import Link from "next/link";
 export function Footer() {
   return (
     <footer className="mt-32 bg-secondary text-secondary-foreground p-4 md:p-8 pb-48 border-t border-muted">
-      <div className="mx-auto max-w-7xl p-4 md:p-8">
+      <div className="mx-auto max-w-5xl p-4 md:p-8">
         {/* 상단: 서비스명 및 약관 링크 */}
         <div className="flex flex-col md:flex-row justify-between items-start md:items-center border-b border-muted-foreground/20 pb-8 gap-6">
           <div>

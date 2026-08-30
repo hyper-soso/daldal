@@ -46,7 +46,7 @@ function TopnavContent() {
         isVisible ? "translate-y-0" : "-translate-y-full md:translate-y-0"
       }`}
     >
-      <div className="mx-auto flex h-full max-w-7xl items-center justify-between gap-4 px-4 md:px-8">
+      <div className="mx-auto flex h-full max-w-5xl items-center justify-between gap-4 px-4 md:px-8">
         <Logo />
 
         <Form action="/search" className="relative w-full max-w-xs md:max-w-sm">
@@ -75,7 +75,7 @@ export function Topnav() {
     <Suspense
       fallback={
         <nav className="fixed top-0 left-0 right-0 z-50 h-16 border-b bg-background">
-          <div className="mx-auto flex h-full max-w-7xl items-center justify-between gap-4 px-4 md:px-8">
+          <div className="mx-auto flex h-full max-w-5xl items-center justify-between gap-4 px-4 md:px-8">
             <Logo />
             <div className="w-full max-w-xs md:max-w-sm h-10 bg-muted animate-pulse rounded-md" />
           </div>

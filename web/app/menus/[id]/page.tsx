@@ -49,7 +49,7 @@ export default async function Page({ params }: Props) {
   const menu = data as MenuWithCafeAndCategories;
 
   return (
-    <main className="pt-16 mx-auto max-w-7xl">
+    <main className="pt-16 mx-auto max-w-5xl">
       <div className="mt-8 px-4 md:px-8 flex items-center gap-2">
         <Link href={"/cafes"} className="hover:underline underline-offset-2">
           카페

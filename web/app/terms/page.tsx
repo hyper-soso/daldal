@@ -1,6 +1,6 @@
 export default function TermsPage() {
   return (
-    <main className="p-4 md:p-8 pt-20 md:pt-24 mx-auto max-w-7xl">
+    <main className="p-4 md:p-8 pt-20 md:pt-24 mx-auto max-w-5xl">
       <header>
         <h1 className="text-4xl font-bold">이용약관</h1>
       </header>
